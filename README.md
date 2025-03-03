@@ -116,6 +116,15 @@ A commit in Git is a snapshot of changes made to a repository. Each commit repre
 
 How does branching work in Git, and why is it an important feature for collaborative development on GitHub? Discuss the process of creating, using, and merging branches in a typical workflow.
 
+-Branching in Git allows developers to create separate environments for working on new features, bug fixes, or experiments without affecting the main codebase. It enables parallel development and smooth collaboration.
+
+**How branching works in Git:**
+-Branches Are Independent Versions of the Codebase - Each branch represents a different development path. The main (or master) branch is usually the stable production version.
+-Work on Features Without Affecting the Main Branch - Developers can create feature branches, make changes, and merge them later.
+-Merge Changes When Ready - Once development is complete, branches can be merged back into the main branch.
+
+
+
 Explore the role of pull requests in the GitHub workflow. How do they facilitate code review and collaboration, and what are the typical steps involved in creating and merging a pull request?
 
 Discuss the concept of "forking" a repository on GitHub. How does forking differ from cloning, and what are some scenarios where forking would be particularly useful?
