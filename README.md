@@ -170,4 +170,9 @@ Discuss the concept of "forking" a repository on GitHub. How does forking differ
 -Forking a repository in GitHub is the process of creating a copy of an existing repository under your GitHub account. This allows you to freely modify the code without affecting the original repository. Forking is commonly used for contributing to open-source projects, experimenting with changes, and collaborating with others.
 
 **Forking vs Cloning**
-Forking Creates a copy of a repository under your GitHub account whereas cloning creates a local copy of a repository on your computer
+-Forking Creates a copy of a repository under your GitHub account whereas cloning creates a local copy of a repository on your computer
+-Forking is stored in Git hub under your account while cloning is stored in the local machine.
+-Forking doesn't affect the original repository as it remains independent unless changes are pushed via pull requests while in cloning changes cannot be made as well but changes can be pushed if you have write access.
+-Forking is best for contributing to a public project whereas cloning is not ideal unless there is write access.
+-Offline development is not available with forking while local development is available with cloning.
+-With forking keeping track of changes is difficult because changes are not automatically synced with the original repo whilst with cloning updates can be fetched with the (git pull) function.
