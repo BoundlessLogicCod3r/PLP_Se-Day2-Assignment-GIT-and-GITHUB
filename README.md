@@ -123,8 +123,51 @@ How does branching work in Git, and why is it an important feature for collabora
 -Work on Features Without Affecting the Main Branch - Developers can create feature branches, make changes, and merge them later.
 -Merge Changes When Ready - Once development is complete, branches can be merged back into the main branch.
 
+**Creating using and merging branches:**
+i.    Create a new branch → git branch feature-branch
+ii.   Switch to the branch → git checkout feature-branch
+iii.  Make changes, stage, and commit → git add . && git commit -m "message"
+iv.   Push the branch (optional) → git push origin feature-branch
+v.    Switch back to main → git checkout main
+vi    Merge changes → git merge feature-branch
+vii.  Resolve conflicts (if any) and finalize merge
+viii. Delete the branch → git branch -d feature-branch
 
 
 Explore the role of pull requests in the GitHub workflow. How do they facilitate code review and collaboration, and what are the typical steps involved in creating and merging a pull request?
+A pull request is a fundamental feature of GitHub that enables collaboration by allowing developers to propose, review, and merge changes into a repository. It serves as a structured way for teams to discuss, review, and approve code changes before merging them into the main branch.
+
+**Pull request Workflow**
+Step 1: Create a Feature Branch (git checkout -b feature-branch) - Developers start by creating a new branch to work on a feature or fix.
+Step 2: Make Changes and Commit - After making modifications, stage and commit the changes. (git add . , git commit -m "Implemented new feature")
+Step 3: Push the Branch to GitHub - Send the local branch to the remote GitHub repository. (git push origin feature-branch)
+Step 4: Create a Pull Request;
+            a) Go to the GitHub repository.
+            b) Click on Pull Requests → New Pull Request.
+            c) Select the base branch (main or develop) and compare it with the feature branch.
+            d) Add a title and description, explaining the changes.
+            e) Click Create Pull Request.
+Step 5: Review and Discussion: 
+            i.   Team members review the code, suggest changes, and approve or request modifications.
+            ii.  Inline comments can be added to specific lines of code.
+            iii. The developer makes necessary updates and pushes them.
+Step 6: Merge the Pull Request - Once approved, the PR can be merged into the main branch using:
+            i.   Merge Commit – Preserves history with all commits.
+            ii.  Squash and Merge – Combines all changes into a single commit for a cleaner history.
+            iii. Rebase and Merge – Keeps a linear commit history.
+
+Step 7: Handling Merge Conflicts in a Pull Request - If there are conflicts between the feature branch and main, GitHub will highlight them.
+            i.   Use GitHub’s online editor to resolve simple conflicts.
+            ii.  Resolve conflicts locally: (git checkout feature-branch, git merge main, git add . , git commit -m "Resolved merge conflicts" , git push origin feature-                     branch)
+            iii. Update the pull request with the resolved conflicts.
+            
+Step 8: Closing and Deleting the Branch - Once the PR is merged, the feature branch can be deleted:
+            a. git branch -d feature-branch  # Locally
+            b. git push origin --delete feature-branch  # Remotely
 
 Discuss the concept of "forking" a repository on GitHub. How does forking differ from cloning, and what are some scenarios where forking would be particularly useful?
+
+-Forking a repository in GitHub is the process of creating a copy of an existing repository under your GitHub account. This allows you to freely modify the code without affecting the original repository. Forking is commonly used for contributing to open-source projects, experimenting with changes, and collaborating with others.
+
+**Forking vs Cloning**
+Forking Creates a copy of a repository under your GitHub account whereas cloning creates a local copy of a repository on your computer
